@@ -1,0 +1,17 @@
+<h1>Reactive Modle Driven Form</h1>
+<form [formGroup]="student" (ngSubmit)="display(student.value)">
+    <h3>
+    First Name:<input type="text" name="fname" formControlName="firstname"><br>
+    Last Name:<input type="text" name="lname" formControlName="lastname"><br>
+    Emp Age:<input type="number" name="eage" formControlName="age"><br>
+    Technologies:<select name="tech" value="tech" formControlName="courses">
+            <option value="">--Select--</option>
+            <option value="Java">Java</option>
+            <option value="C++">C++</option>
+            <option value="Angular">Angular</option>
+        </select><br>
+        <hr>
+    <input type="submit" name="register" value="Register" [disabled]="student.invalid">
+    <input type="reset" name="reset" value="Reset">
+    </h3>
+</form>

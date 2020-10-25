@@ -1,0 +1,13 @@
+<h1>
+    Directive Demo
+</h1>
+<button (click)="show = !show">{{show ? 'hide' : 'show'}}</button>
+show = {{show}}
+<br>
+<div *ngIf="show">Text to show</div>
+<h2>else if</h2>
+<button (click)="show = !show">{{show ? 'hide' : 'show'}}</button>
+show = {{show}}
+<br>
+<div *ngIf="show; else elseBlock">Text to show</div>
+<ng-template #elseBlock>Alternate text while primary text is hidden</ng-template>
